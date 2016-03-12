@@ -69,3 +69,7 @@ fos_user:
     db_driver: orm
     firewall_name: api
     user_class: AppBundle\Entity\User
+fos_rest:
+    routing_loader:
+        default_format: json          # All responses should be JSON formated
+        include_format: false        # We do not include format in request, so that all responses
