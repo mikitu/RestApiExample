@@ -1,3 +1,4 @@
-api_homepage:
-    path:     /
-    defaults: { _controller: ApiBundle:Default:index }
+api_lesson:
+    type: rest
+    resource: ApiBundle\Controller\LessonController
+    name_prefix:  api_

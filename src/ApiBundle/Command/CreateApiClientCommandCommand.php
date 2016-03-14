@@ -41,8 +41,6 @@ EOT
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        // php app/console oauth-server:client:create --redirect-uri="http://127.0.0.1:8000/" --grant-type="authorization_code" --grant-type="password" --grant-type="refresh_token" --grant-type="token" --grant-type="client_credentials"
-
         $clientManager = $this->getContainer()->get('fos_oauth_server.client_manager.default');
         $client = $clientManager->createClient();
         $client->setRedirectUris($input->getOption('redirect-uri'));
